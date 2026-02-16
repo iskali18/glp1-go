@@ -91,7 +91,7 @@ h3{
 .nav{
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 0;  /* Changed from 14px */
   flex-wrap: nowrap;
   white-space: nowrap;
 }
@@ -101,7 +101,13 @@ h3{
   text-decoration: none;
   font-weight: 600;
   margin-left: 0;
+  padding: 0 12px;  /* ADD THIS - creates space around each item */
 }
+
+.nav a:first-of-type {
+  padding-left: 0;  /* ADD THIS - removes left padding from first item */
+}
+
 .nav a:hover{
   color: rgba(16,19,24,.98);
   text-decoration: underline;
@@ -111,13 +117,13 @@ h3{
 /* Add separator between nav links */
 .nav a::after {
   content: "|";
-  margin-left: 14px;
+  margin-left: 12px;  /* Space before separator */
   color: var(--rule);
   font-weight: 400;
   pointer-events: none;
 }
 
-/* Remove separator after the last link (before the share button) */
+/* Remove separator after the last link */
 .nav a:last-of-type::after {
   content: none;
 }
