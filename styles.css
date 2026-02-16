@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  --bg: #fcfcfa;        /* off-white */
+  --bg: #fcfcfa;
   --text: #101318;
   --muted: #5f6b7a;
   --rule: #e6e8ee;
@@ -11,6 +11,11 @@
 
   --max: 960px;
   --radius: 16px;
+}
+
+/* FIX FOR STICKY HEADER ANCHOR LINKS */
+html {
+  scroll-padding-top: 80px;
 }
 
 *{ box-sizing:border-box; }
