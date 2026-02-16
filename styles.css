@@ -21,7 +21,7 @@ body{
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  font-size: 16px; /* your request */
+  font-size: 16px;
   overflow-x: hidden;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
@@ -32,7 +32,7 @@ h1,h2,h3{ margin:0px 0 10px; line-height:1.2; }
 h1{
   font-size: clamp(2.1rem, 3.1vw, 2.8rem);
   letter-spacing:-.02em;
-  font-weight: 400; /* lighter H1 */
+  font-weight: 400;
 }
 h2{
   font-size: 1.55rem;
@@ -48,7 +48,7 @@ h3{
 
 .muted{ color: var(--muted); }
 .meta{ color: var(--muted); font-size:.95rem; }
-.body-lg{ font-size: 1rem; } /* stays at 16px */
+.body-lg{ font-size: 1rem; }
 
 .container{
   max-width: var(--max);
@@ -56,7 +56,6 @@ h3{
   padding: 0 22px;
 }
 
-/* Remove the “striped sections”: all sections share the same background */
 .section{ padding: 24px 0; }
 
 /* Header */
@@ -72,7 +71,7 @@ h3{
 .header-inner{
   display:flex;
   justify-content: space-between;
-  align-items: center;              /* ✅ keep nav + button aligned */
+  align-items: center;
   gap: 16px;
   padding: 14px 0;
 }
@@ -84,12 +83,11 @@ h3{
 }
 .brand small{ display:block; margin-top:2px; }
 
-/* Nav layout (prevents share icon dropping) */
 .nav{
-  display: flex;                    /* ✅ keep items on one line */
+  display: flex;
   align-items: center;
   gap: 14px;
-  flex-wrap: nowrap;                /* ✅ don't wrap to next line */
+  flex-wrap: nowrap;
   white-space: nowrap;
 }
 
@@ -97,7 +95,7 @@ h3{
   color: rgba(16,19,24,.80);
   text-decoration: none;
   font-weight: 600;
-  margin-left: 0;                   /* ✅ gap handles spacing now */
+  margin-left: 0;
 }
 .nav a:hover{
   color: rgba(16,19,24,.98);
@@ -105,7 +103,7 @@ h3{
   text-underline-offset: 3px;
 }
 
-/* Global links: obvious but not salesy */
+/* Global links */
 a{
   color: var(--link);
   text-decoration: none;
@@ -128,38 +126,35 @@ a:hover{
   z-index:9999;
 }
 
-/* ✅ Share button should behave like nav links (underline on hover, no box) */
+/* Share button */
 .nav .share-btn{
   appearance: none;
   background: none;
-  border: 0;                        /* ✅ remove border */
-  padding: 0;                       /* ✅ behave like text link */
+  border: 0;
+  padding: 0;
   margin: 0;
-  color: rgba(16,19,24,.80);        /* ✅ match nav links */
+  color: rgba(16,19,24,.80);
   cursor: pointer;
-  font: inherit;                    /* ✅ same font as links */
-  font-weight: 600;                 /* ✅ same weight as links */
-  line-height: 1;                   /* ✅ align with text */
-  display: inline-flex;             /* ✅ inline like links */
+  font: inherit;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Make the icon match the link size and sit on the baseline */
 .nav .share-btn svg{
   width: 20px;
   height: 20px;
   display: block;
 }
 
-/* Underline-on-hover like the other links */
 .nav .share-btn:hover{
   color: rgba(16,19,24,.98);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* Keyboard focus (subtle, not a big ugly box) */
 .nav .share-btn:focus-visible{
   outline: 2px solid rgba(31,75,99,.25);
   outline-offset: 4px;
@@ -198,12 +193,12 @@ a:hover{
 .service-item{
   padding: 14px 16px;
   border: 1px solid var(--rule);
-  border-radius: 14px;
+  border-radius: 0;  /* ← SHARP CORNERS */
   background: #fff;
 }
 .service-link{
   display: inline-block;
-  font-size: 1.2rem;     /* ~19px */
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--link);
   text-decoration: none;
@@ -223,7 +218,7 @@ a:hover{
 .clinic{
   padding: 14px 16px;
   border: 1px solid var(--rule);
-  border-radius: 14px;
+  border-radius: 0;  /* ← SHARP CORNERS */
   background: #fff;
 }
 .clinic-desc{ color: var(--muted); }
