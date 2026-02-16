@@ -122,7 +122,7 @@ h3{
   background: none;
   border: 0;
   padding: 0;
-  margin: 0 0 0 24px;
+  margin-left: 24px;  /* SINGLE margin declaration */
   color: rgba(16,19,24,.80);
   cursor: pointer;
   font: inherit;
@@ -131,7 +131,6 @@ h3{
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: 12px;
 }
 
 .nav .share-btn svg{
