@@ -91,7 +91,7 @@ h3{
 .nav{
   display: flex;
   align-items: center;
-  gap: 0;  /* Changed from 14px */
+  gap: 0;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
@@ -100,12 +100,7 @@ h3{
   color: rgba(16,19,24,.80);
   text-decoration: none;
   font-weight: 600;
-  margin-left: 0;
-  padding: 0 12px;  /* ADD THIS - creates space around each item */
-}
-
-.nav a:first-of-type {
-  padding-left: 0;  /* ADD THIS - removes left padding from first item */
+  margin: 0 14px 0 0;  /* Only right margin */
 }
 
 .nav a:hover{
@@ -117,7 +112,7 @@ h3{
 /* Add separator between nav links */
 .nav a::after {
   content: "|";
-  margin-left: 12px;  /* Space before separator */
+  margin: 0 14px;  /* Equal spacing on both sides */
   color: var(--rule);
   font-weight: 400;
   pointer-events: none;
