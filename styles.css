@@ -174,40 +174,6 @@ a:hover{
   z-index:9999;
 }
 
-/* Share button */
-.nav .share-btn{
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  color: rgba(16,19,24,.80);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 600;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.nav .share-btn svg{
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-
-.nav .share-btn:hover{
-  color: rgba(16,19,24,.98);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.nav .share-btn:focus-visible{
-  outline: 2px solid rgba(31,75,99,.25);
-  outline-offset: 4px;
-  border-radius: 10px;
-}
 
 /* Feature image */
 .feature-image{
