@@ -108,6 +108,20 @@ h3{
   text-underline-offset: 3px;
 }
 
+/* Add separator between nav links */
+.nav a::after {
+  content: "|";
+  margin-left: 14px;
+  color: var(--rule);
+  font-weight: 400;
+  pointer-events: none;
+}
+
+/* Remove separator after the last link (before the share button) */
+.nav a:last-of-type::after {
+  content: none;
+}
+
 /* Global links */
 a{
   color: var(--link);
